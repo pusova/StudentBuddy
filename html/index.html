@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentBuddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- hlavicka -->
+    <header class="app-header">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo" class="logo">
+            <h1>StudentBuddy</h1>
+        </div>
+        <nav class="app-nav">
+            <a href="#" title="Feed">Feed</a>
+            <p>|</p>
+            <a href="#" title="Friends">Friends</a>
+        </nav>
+        <div class="header-actions">
+            <button class="icon-btn" title="Search">🔍</button>
+            <button class="icon-btn" title="Notifications">🔔</button>
+            <a href="#" class="user-avatar-link" title="Môj profil">
+                <div class="user-avatar">JK</div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hlavný kontajner stránky (Layout Grid/Flex) -->
+    <div class="app-container">
+
+        <aside class="filters-panel" id="filtersPanel">
+                <div class="hide-filters">
+                    <button class="filter-button" title="Hide filters">Hide Filters</button>
+                </div>
+                <div class="filter-group">
+                    <h3>Category</h3>
+                    <label><input type="checkbox" checked> All</label>
+                    <label><input type="checkbox"> ODVOZ</label>
+                    <label><input type="checkbox"> POŽIČOVŇA</label>
+                    <label><input type="checkbox"> EVENTY</label>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Location</h3>
+                    <label><input type="checkbox"> Veľký Diel</label>
+                    <label><input type="checkbox"> Hliny</label>
+                    <label><input type="checkbox"> FPEDAS</label>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Availability</h3>
+                    <label><input type="checkbox" checked> Available Only</label>
+                </div>
+
+                <button class="reset-filter-btn">Reset Filter</button>
+            </aside>
+
+
+        <!-- Hlavný obsahový priestor -->
+        <main class="app-main">
+
+            <section class="hero-section">
+                <h2>Tvoj kampus, prepojený.</h2>
+                <p>Zdieľaj jazdu, požičaj, čo potrebuješ, alebo sa spoznaj nových ľudí.</p>
+            </section>
+
+            <div class="feed-controls">
+                <div class="filter-container">
+                    <button class="filter-button" title="Show filters">Show filters</button>
+                </div>
+                <div class="bottom-row">
+                    <div class="active-filters">
+                        <span class="filter-tag">Všetko <button>×</button></span>
+                        <span class="filter-tag">Dostupné <button>×</button></span>
+                    </div>
+                    <div class="sort-container" title="Sort by">
+                        <label for="sort">Zoradiť podľa:</label>
+                        <select id="sort">
+                            <option>Newest</option>
+                            <option>Oldest</option>
+                            <option>Price: ^ </option>
+                            <option>Price: v </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tu bude obsah (v Ráme 1 placeholder 'main', v Ráme 2 mriežka kariet) -->
+            <div class="main-placeholder">
+                <p>Žiadne príspevky</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Pätička stránky -->
+    <footer class="app-footer">
+        <p>&copy; 2026 StudentBuddy</p>
+        <div class="footer-links">
+            <a href="#" title="FAQ">FAQ</a>
+            <a href="#" title="Terms">Terms</a>
+        </div>
+    </footer>
+
+    <button class="floating-add-btn" title="Pridať nový príspevok">+ New Post</button>
+
+</body>
+</html>

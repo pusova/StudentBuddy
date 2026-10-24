@@ -43,6 +43,12 @@ body {
     font-weight: 700;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .app-nav {
     display: flex;
     gap: 1.5rem;
@@ -54,23 +60,30 @@ body {
     font-weight: 500;
 }
 
-.app-nav a.active {
+.app-nav :hover {
     color: #111827;
-    font-weight: 700;
+    font-weight: 600;
 }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
 
 /* ==========================================
    3. HLAVNÝ KONTAJNER (BEZ SIDEBARU)
    ========================================== */
 .app-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem 1rem;
-    flex: 1;
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    flex: 1;
 }
 
 /* Ovládacia lišta (filtre/tlačidlo + sort) */
@@ -128,8 +141,8 @@ body {
 }
 
 /* Pridanie šípky pred text pomocou CSS */
-.filter-button::before {
-    content: "∨";               /* Šípka nadol */
+.filter-button::after {
+    content: " \25BC";  
     font-size: 0.75rem;
     font-weight: bold;
     color: #6b7280;
@@ -178,8 +191,6 @@ body {
 
 /* Hlavný placeholder */
 .main-placeholder {
-    background-color: #f3f4f6;
-    border: 2px dashed #d1d5db;
     border-radius: 0.5rem;
     padding: 4rem 2rem;
     text-align: center;
@@ -187,9 +198,114 @@ body {
     font-weight: 600;
 }
 
+
+.hero-section {
+    margin-bottom: 1rem;
+}
+
+.hero-section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.hero-section p {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.filters-panel {
+    width: 260px;               /* Pevná šírka sidebaru */
+    flex-shrink: 0;             /* Zabezpečí, že sa panel nezmenší */
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-self: flex-start;    /* Drží sa hore, neroztahuje sa na celú výšku */
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-group h3 {
+    font-size: 0.938rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+    cursor: pointer;
+}
+
+.reset-filter-btn {
+    background: none;
+    border: none;
+    color: #4b5563;
+    font-size: 0.813rem;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    width: fit-content;
+}
+
+.reset-filter-btn:hover {
+    color: #111827;
+}
+
+/* ==========================================
+   7. AKČNÉ PRVKY A IKONY V HLAVIČKE
+   ========================================== */
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.125rem;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.user-avatar {
+    width: 2rem;
+    height: 2rem;
+    background-color: #374151;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.app-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 0; /* Zabraňuje pretečeniu gridu */
+}
+
+
+
 /* ==========================================
    4. PÄTIČKA (FOOTER)
    ========================================== */
+
+:root{
+    --footer-height: 3.5rem; /* Výška pätičky */
+}
+
 .app-footer {
     display: flex;
     justify-content: space-between;
@@ -200,6 +316,7 @@ body {
     font-size: 0.875rem;
     color: #6b7280;
     width: 100%;
+    height: var(--footer-height);
 }
 
 .footer-links {
@@ -214,4 +331,68 @@ body {
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+/* Plávajúce tlačidlo + New Post */
+.floating-add-btn {
+    position: fixed;
+    bottom: var(--footer-height);
+    right: 2rem;
+    background-color: #111827;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.2s;
+}
+
+.floating-add-btn:hover {
+    background-color: #374151;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column; /* Prechod z dvoch stĺpcov na jeden pod sebou */
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .filters-panel {
+        width: 100%; /* Panel filtrov zaberie celú šírku na mobile */
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem; /* Zmenšenie hlavného nadpisu */
+    }
+
+    .hero-section p {
+        font-size: 0.938rem;
+    }
+
+    
+
+    .logo-container h1 {
+        display: none; /* Skryje logo text na veľmi malých obrazovkách */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-actions .icon-btn[title="Notifications"] {
+        display: none; /* Skryje ikonu notifikácií na mobile */
+    }
+
+    .app-nav a[title="Friends"], .app-nav p{
+        display: none;
+    }
+
+    .app-nav a:first-child::after {
+        content: " \25BC";  
+        font-size: 0.75rem;
+        vertical-align: middle;
+    }
 }
