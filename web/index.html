@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentBuddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- hlavicka -->
+    <header class="app-header">
+        <div class="logo-container">
+            <h1>StudentBuddy</h1>
+        </div>
+        <nav class="app-nav">
+            <a href="#" class="active">Feed</a>
+            <a href="#">Friends</a>
+        </nav>
+        <div class="header-actions">
+            <!-- Miesto pre ikony: vyhľadávanie, notifikácie, profil -->
+        </div>
+    </header>
+
+    <!-- Hlavný kontajner stránky (Layout Grid/Flex) -->
+    <div class="app-container">
+        <!-- Hlavný obsahový priestor -->
+        <main class="app-main">
+            <div class="feed-controls">
+                <div class="filter-container">
+                    <button class="filter-button">Show filters</button>
+                </div>
+                <div class="bottom-row">
+                    <div class="active-filters">
+                        <span class="filter-tag">All <button>×</button></span>
+                        <span class="filter-tag">Available Only <button>×</button></span>
+                    </div>
+                    <div class="sort-container">
+                        <label for="sort">Sort by:</label>
+                        <select id="sort">
+                            <option>Newest</option>
+                            <option>Oldest</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Tu bude obsah (v Ráme 1 placeholder 'main', v Ráme 2 mriežka kariet) -->
+            <div class="main-placeholder">main</div>
+        </main>
+    </div>
+
+    <!-- Pätička stránky -->
+    <footer class="app-footer">
+        <p>&copy; 2026 StudentBuddy</p>
+        <div class="footer-links">
+            <a href="#">FAQ</a>
+            <a href="#">Terms</a>
+        </div>
+    </footer>
+
+</body>
+</html>
