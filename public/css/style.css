@@ -49,6 +49,12 @@ body {
     gap: 0.5rem;
 }
 
+.logo {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+}
+
 .app-nav {
     display: flex;
     gap: 1.5rem;
@@ -189,15 +195,133 @@ body {
     border: 1px solid #d1d5db;
 }
 
-/* Hlavný placeholder */
-.main-placeholder {
+/* ==========================================
+   4. MRIEŽKA KARIEK (GRID)
+   ========================================== */
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.post {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
-    padding: 4rem 2rem;
-    text-align: center;
-    color: #9ca3af;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-actions {
+    display: flex;
+    gap: 0.5rem;
+    vertical-align: middle;
+}
+
+.favourite :clicked {
+    content: "❤️"; 
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 0.85rem;
+    text-transform: uppercase;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.post-image {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+}
+
+.post-body {
+    padding: 0.5rem;
+}
+
+.post-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.post-meta {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.post-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #f3f4f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    color: #374151;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.author-profile-pic {
+    width: 2rem;
+    height: 2rem;
+    background-color: #374151;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
     font-weight: 600;
 }
 
+.author-name {
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.price-tag {
+    font-weight: 600;
+    color: #111827;
+}
+
+/* ==========================================
+   5. HERO SEKCE (ÚVODNÝ TEXT)
+   ========================================== */
 
 .hero-section {
     margin-bottom: 1rem;
@@ -297,13 +421,8 @@ body {
 }
 
 
-
-/* ==========================================
-   4. PÄTIČKA (FOOTER)
-   ========================================== */
-
 :root{
-    --footer-height: 3.5rem; /* Výška pätičky */
+    --footer-height: 3.5rem; 
 }
 
 .app-footer {
@@ -373,8 +492,6 @@ body {
     .hero-section p {
         font-size: 0.938rem;
     }
-
-    
 
     .logo-container h1 {
         display: none; /* Skryje logo text na veľmi malých obrazovkách */

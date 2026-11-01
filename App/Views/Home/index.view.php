@@ -3,37 +3,141 @@
 /** @var \Framework\Support\LinkGenerator $link */
 ?>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col mt-5">
-            <div class="text-center">
-                <h2>Vaííčko MVC FW</h2>
-                <h3>Version <?= App\Configuration::FW_VERSION ?></h3>
-                <img src="<?= $link->asset('images/vaiicko_logo.png') ?>" alt="Framework Logo">
-                <p>
-                    Congratulations, you have successfully installed and run the framework
-                    <strong>Vaííčko</strong> <?= App\Configuration::FW_VERSION ?>!<br>
-                    We hope that you will create a great application using this framework.<br>
-                </p>
-                <p>
-                    This simple framework was created for teaching purposes and to better understand how the MVC
-                    architecture works.<br>
-                    It is intended for students of the subject <em>web application development</em>, but not only
-                    for them.
-                </p>
+<div class="app-container">
+    <aside class="filters-panel" id="filtersPanel">
+        <div class="hide-filters">
+            <button class="filter-button" title="Hide filters">
+                Hide Filters
+            </button>
+        </div>
+        <div class="filter-group">
+            <h3>Category</h3>
+            <label><input type="checkbox" checked /> All</label>
+            <label><input type="checkbox" /> ODVOZ</label>
+            <label><input type="checkbox" /> POŽIČOVŇA</label>
+            <label><input type="checkbox" /> EVENTY</label>
+        </div>
+
+        <div class="filter-group">
+            <h3>Location</h3>
+            <label><input type="checkbox" /> Veľký Diel</label>
+            <label><input type="checkbox" /> Hliny</label>
+            <label><input type="checkbox" /> FPEDAS</label>
+        </div>
+
+        <div class="filter-group">
+            <h3>Availability</h3>
+            <label><input type="checkbox" checked /> Available Only</label>
+        </div>
+
+        <button class="reset-filter-btn">Reset Filter</button>
+    </aside>
+
+    <!-- Hlavný obsahový priestor -->
+    <main class="app-main">
+        <section class="hero-section">
+            <h2>Tvoj kampus, prepojený.</h2>
+            <p>
+                Zdieľaj jazdu, požičaj, čo potrebuješ, alebo sa spoznaj nových ľudí.
+            </p>
+        </section>
+
+        <div class="feed-controls">
+            <div class="filter-container">
+                <button class="filter-button" title="Show filters">
+                    Show filters
+                </button>
+            </div>
+            <div class="bottom-row">
+                <div class="active-filters">
+                    <span class="filter-tag">Všetko <button>×</button></span>
+                    <span class="filter-tag">Dostupné <button>×</button></span>
+                </div>
+                <div class="sort-container" title="Sort by">
+                    <label for="sort">Zoradiť podľa:</label>
+                    <select id="sort">
+                        <option>Newest</option>
+                        <option>Oldest</option>
+                        <option>Price: ^</option>
+                        <option>Price: v</option>
+                    </select>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col text-center">
-            <h4>Authors</h4>
-            <div>
-                <a href="mailto:Patrik.Hrkut@fri.uniza.sk">doc. Ing. Patrik Hrkút, PhD.</a><br>
-                <a href="mailto:Michal.Duracik@fri.uniza.sk">Ing. Michal Ďuračík, PhD.</a><br>
-                <a href="mailto:Matej.Mesko@fri.uniza.sk">Ing. Matej Meško, PhD.</a><br><br>
-                &copy; 2020-<?= date('Y') ?> University of Žilina, Faculty of Management Science and Informatics,
-                Department of Software Technologies
+
+        <div class="main">
+            <div class="post-grid">
+                <div class="post">
+                    <div class="post-header">
+                        <span class="badge category">
+                            🚗 ODVOZ
+                        </span>
+                        <div class="post-actions">
+                            <button class="btn-icon favourite">🤍</button>
+                            <button class="btn-icon">⋮</button>
+                        </div>
+                    </div>
+
+                    <img src="images\placeholder1.jpg" alt="Placeholder Image" class="post-image" />
+
+                    <div class="post-body">
+                        <h3 class="post-title">Odvoz Žilina ➔ Bratislava</h3>
+
+                        <div class="post-meta">
+                            <span>📅 16 Oct 2026</span>
+                            <span>🕒 15:30</span>
+                        </div>
+
+                        <div class="post-tags">
+                            <span class="tag">📍 Žilina</span>
+                            <span class="tag">2 seats left</span>
+                        </div>
+                    </div>
+
+                    <div class="post-footer">
+                        <div class="author-info">
+                            <div class="author-profile-pic">PM</div>
+                            <span class="author-name">Peter M. • FRI</span>
+                        </div>
+                        <div class="price-tag">5 €</div>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <span class="badge category">
+                            📚 POŽIČOVŇA
+                        </span>
+                        <div class="post-actions">
+                            <button class="btn-icon favourite">🤍</button>
+                            <button class="btn-icon">⋮</button>
+                        </div>
+                    </div>
+
+                    <img src="images\placeholder1.jpg" alt="Placeholder Image" class="post-image" />
+
+                    <div class="post-body">
+                        <h3 class="post-title">Požičanie bicykla</h3>
+
+                        <div class="post-meta">
+                            <span>📅 18 Oct 2026</span>
+                            <span>🕒 10:00</span>
+                        </div>
+
+                        <div class="post-tags">
+                            <span class="tag">📍 FPEDAS</span>
+                            <span class="tag">Available</span>
+                        </div>
+                    </div>
+
+                    <div class="post-footer">
+                        <div class="author-info">
+                            <div class="author-profile-pic">LK</div>
+                            <span class="author-name">Lukáš K. • FRI</span>
+                        </div>
+                        <div class="price-tag">2 € / day</div>
+                    </div>
             </div>
         </div>
-    </div>
+    </main>
 </div>
