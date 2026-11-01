@@ -21,9 +21,9 @@
             <h1>StudentBuddy</h1>
         </div>
         <nav class="app-nav">
-            <a href="#" title="Feed">Feed</a>
+            <a href="?c=home" title="Feed">Feed</a>
             <p>|</p>
-            <a href="#" title="Friends">Friends</a>
+            <a href="?c=home&a=friends" title="Friends">Friends</a>
         </nav>
         <div class="header-actions">
             <button class="icon-btn" title="Search">🔍</button>

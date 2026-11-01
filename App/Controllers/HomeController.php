@@ -43,14 +43,13 @@ class HomeController extends BaseController
     }
 
     /**
-     * Displays the contact page.
+     * Displays the friends page.
+     * 
+     * This action serves the main HTML view of the friends page, where users can see their friends and related posts.
      *
-     * This action serves the HTML view for the contact page, which is accessible to all users without any
-     * authorization.
-     *
-     * @return Response The response object containing the rendered HTML for the contact page.
+     * @return Response The response object containing the rendered HTML for the friends page.
      */
-    public function contact(Request $request): Response
+    public function friends(Request $request): Response
     {
         return $this->html();
     }

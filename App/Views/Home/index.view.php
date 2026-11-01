@@ -137,6 +137,79 @@
                         </div>
                         <div class="price-tag">2 € / day</div>
                     </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <span class="badge category">
+                            🚗 ODVOZ
+                        </span>
+                        <div class="post-actions">
+                            <button class="btn-icon favourite">🤍</button>
+                            <button class="btn-icon">⋮</button>
+                        </div>
+                    </div>
+
+                    <img src="images\placeholder1.jpg" alt="Placeholder Image" class="post-image" />
+
+                    <div class="post-body">
+                        <h3 class="post-title">Odvoz na FPEDAS</h3>
+
+                        <div class="post-meta">
+                            <span>📅 18 Oct 2026</span>
+                            <span>🕒 10:00</span>
+                        </div>
+
+                        <div class="post-tags">
+                            <span class="tag">📍 FPEDAS</span>
+                            <span class="tag">Available</span>
+                        </div>
+                    </div>
+
+                    <div class="post-footer">
+                        <div class="author-info">
+                            <div class="author-profile-pic">MK</div>
+                            <span class="author-name">Marek K. • FRI</span>
+                        </div>
+                        <div class="price-tag">2 € / person</div>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <span class="badge category">
+                            📚 POŽIČOVŇA
+                        </span>
+                        <div class="post-actions">
+                            <button class="btn-icon favourite">🤍</button>
+                            <button class="btn-icon">⋮</button>
+                        </div>
+                    </div>
+
+                    <img src="images\placeholder1.jpg" alt="Placeholder Image" class="post-image" />
+
+                    <div class="post-body">
+                        <h3 class="post-title">Požičanie bicykla</h3>
+
+                        <div class="post-meta">
+                            <span>📅 20 Oct 2026</span>
+                            <span>🕒 14:00</span>
+                        </div>
+
+                        <div class="post-tags">
+                            <span class="tag">📍 Veľký Diel</span>
+                            <span class="tag">Available</span>
+                        </div>
+                    </div>
+
+                    <div class="post-footer">
+                        <div class="author-info">
+                            <div class="author-profile-pic">ZS</div>
+                            <span class="author-name">Zuzana S. • FRI</span>
+                        </div>
+                        <div class="price-tag">Free</div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
