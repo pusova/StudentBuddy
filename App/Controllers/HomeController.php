@@ -44,7 +44,7 @@ class HomeController extends BaseController
 
     /**
      * Displays the friends page.
-     * 
+     *
      * This action serves the main HTML view of the friends page, where users can see their friends and related posts.
      *
      * @return Response The response object containing the rendered HTML for the friends page.
