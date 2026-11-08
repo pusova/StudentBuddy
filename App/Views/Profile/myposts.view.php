@@ -25,7 +25,7 @@
                                 2 => '🎉 EVENTY',
                                 3 => '📦 POŽIČOVŇA',
                             };
-                            ?>
+    ?>
                             <span class="badge category"><?= $categoryName ?></span>
                             <div class="post-actions">
                                 <button class="btn-icon favourite">🤍</button>
@@ -61,7 +61,7 @@
                                 <span>📅 <?= htmlspecialchars(date('d M Y', strtotime($post->getDatePlanned()))) ?></span>
                                 <?php
                                 $time = date('H:i', strtotime($post->getDatePlanned()));
-                                if ($time !== '00:00'):
+                                if ($time !== '00:00') :
                                 ?>
                                     <span>🕒 <?= htmlspecialchars($time) ?></span>
                                 <?php endif; ?>
@@ -69,7 +69,7 @@
 
                             <div class="post-tags">
                                 <span class="tag">📍 <?= htmlspecialchars($post->getLocation()) ?></span>
-                                <?php if ($post->getCapacity()): ?>
+                                <?php if ($post->getCapacity()) : ?>
                                     <span class="tag"><?= htmlspecialchars($post->getCapacity()) ?> seats left</span>
                                 <?php endif; ?>
                             </div>
@@ -86,7 +86,7 @@
 
                     </div>
                 <?php endforeach; ?>
-            <?php else: ?>
+            <?php else : ?>
                 <p class="no-posts-msg">Zatiaľ nemáš žiadne príspevky.</p>
             <?php endif; ?>
         </div>

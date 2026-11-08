@@ -10,8 +10,6 @@ use App\Models\Post;
 
 class ProfileController extends BaseController
 {
-
-
     public function index(Request $request): Response
     {
         return $this->html();
@@ -21,7 +19,7 @@ class ProfileController extends BaseController
      * Summary of myposts
      * 
      * This action serves the main HTML view of the user's own posts page, where users can see their own posts and related information.
-     * 
+     *
      * @return Response
      */
     public function myposts(Request $request): Response
