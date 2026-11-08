@@ -23,25 +23,21 @@ Prostredníctvom tejto aplikácie si študenti môžu organizovať spoločné ak
 - Administrátor zablokuje príspevok alebo používateľa.
 
 ## Plánované entity
-**User**
+**Users**
 - používateľ
 - atribúty: #id, name, surename, email, password_hash, gender, dorm, faculty, profile_pic_path, socials
 
-**Post**    
+**Posts**    
 - príspevok
-- atribúty: #id, (fk)user_id, (fk)category_id, (fk)location_id, title, description, photo_path, preferences, date_origin, status, date_origin
+- atribúty: #id, (fk)user_id, (fk)category_id, location, title, description, photo_path, date_updated, status, date_planned
 
-**Reaction**
+**Reactions**
 - záujem o akciu
 - atribúty: (pfk)id_post, (fk)id_user, reaction
 
 **Category**
 - kategoria prispevku
 - atributy: #id, cat_title, icon
-
-**Location**
-- miesto konania
-- atribúty: #id, loc_event, loc_meeting
 
 **Friend**
 - priateľstvo medzi študentmi - spojovacia tabuľka

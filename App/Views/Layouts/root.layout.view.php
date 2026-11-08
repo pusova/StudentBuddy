@@ -28,9 +28,22 @@
         <div class="header-actions">
             <button class="icon-btn" title="Search">🔍</button>
             <button class="icon-btn" title="Notifications">🔔</button>
-            <a href="#" class="user-avatar-link" title="Môj profil">
+            <div class="profile-menu-container">
+                <details class="dropdown">
+                    <summary class="profile-pic-btn">
+                        <div class="user-avatar">KP</div>
+                    </summary>
+
+                    <div class="dropdown-content">
+                        <a href="#profile">Môj profil</a>
+                        <a href="<?= $link->url('profile.myposts') ?>">Moje príspevky</a>
+                        <a href="#logout">Odhlásiť sa</a>
+                    </div>
+                </details>
+            </div>
+            <!--<a href="#" class="user-avatar-link" title="Môj profil">
                 <div class="user-avatar">JK</div>
-            </a>
+            </a>-->
         </div>
     </header>
 

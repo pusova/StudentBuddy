@@ -90,6 +90,36 @@ body {
     flex-direction: column;
 }
 
+/* Skrytie predvolenej šípky pri detaile */
+details.dropdown summary::-webkit-details-marker {
+    display: none;
+}
+details.dropdown summary {
+    list-style: none; /* Pre Firefox */
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    top: 55px; /* Pod fotkou */
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
 
 
 /* ==========================================
@@ -208,6 +238,28 @@ body {
     border: 1px solid #d1d5db;
 }
 
+.posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Tlačidlo pridať */
+.btn-add {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
 /* ==========================================
    4. MRIEŽKA KARIEK (GRID)
    ========================================== */
@@ -257,6 +309,65 @@ body {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+}
+
+/* Trojbodkové menu detail / summary */
+.post-menu-details {
+    position: relative;
+    display: inline-block;
+}
+
+.post-menu-summary {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    line-height: 1;
+    padding: 0;
+    list-style: none; /* Pre Firefox */
+}
+
+.post-menu-summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Rozbaľovacie okno ponuky */
+.post-dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-width: 120px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.post-dropdown-item {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.post-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.post-dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.post-dropdown-item.text-danger {
+    color: #dc3545;
+}
+
+.post-dropdown-item.text-danger:hover {
+    background-color: #fff5f5;
 }
 
 .post-image {
@@ -399,6 +510,89 @@ body {
 
 .reset-filter-btn:hover {
     color: #111827;
+}
+
+/* ==========================
+    FORMULAR
+    ======================= */
+
+/* Hlavný obal formulára */
+.post-form {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    width: 100%;
+    min-width: 320px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.form-main-title {
+    text-align: center;
+    color: #222;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Skupina pre jednotlivé polia */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Popisky polí */
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Vstupné polia (inputy, selecty, textarea) */
+.form-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fcfcfc;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.15);
+    background-color: #ffffff;
+}
+
+/* Špeciálne pre textarea, aby sa nezbláznila do šírky */
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Tlačidlo na odoslanie formulára */
+.form-submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.form-submit-btn:hover {
+    background-color: #218838;
 }
 
 /* ==========================================
