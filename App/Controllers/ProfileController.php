@@ -82,5 +82,4 @@ class ProfileController extends BaseController
 
         return $post;
     }
-
 }

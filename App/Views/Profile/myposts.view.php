@@ -1,4 +1,5 @@
 <?php
+
 /** @var \Framework\Support\LinkGenerator $link */
 /** @var array $posts */
 ?>
@@ -12,8 +13,8 @@
         </div>
 
         <div class="post-grid">
-            <?php if (!empty($posts)): ?>
-                <?php foreach ($posts as $post): ?>
+            <?php if (!empty($posts)) : ?>
+                <?php foreach ($posts as $post) : ?>
                     <div class="post">
 
                         <!-- Horná časť s kategóriou a akciami -->
@@ -22,7 +23,7 @@
                             $categoryName = match ($post->getCategoryId()) {
                                 1 => '🚗 ODVOZ',
                                 2 => '🎉 EVENTY',
-                                default => '📦 POŽIČOVŇA',
+                                3 => '📦 POŽIČOVŇA',
                             };
                             ?>
                             <span class="badge category"><?= $categoryName ?></span>
@@ -61,7 +62,7 @@
                                 <?php
                                 $time = date('H:i', strtotime($post->getDatePlanned()));
                                 if ($time !== '00:00'):
-                                    ?>
+                                ?>
                                     <span>🕒 <?= htmlspecialchars($time) ?></span>
                                 <?php endif; ?>
                             </div>

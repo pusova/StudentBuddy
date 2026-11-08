@@ -35,7 +35,7 @@ class Post extends Model
     protected int $category_id = 1; // Default category ID
     protected string $title = '';
     protected string $description = '';
-    protected ?string $photo_path = ''; 
+    protected ?string $photo_path = '';
     protected string $location = '';
     protected string $date_updated = '';
     protected string $date_planned = '';

@@ -1,4 +1,5 @@
 <?php
+
 /** @var \App\Models\Post $post */
 /** @var Framework\Support\LinkGenerator $link */
 ?>
@@ -8,7 +9,7 @@
         <h1 class="form-main-title"><?= $post->getId() ? 'Upraviť príspevok' : 'Nový príspevok' ?></h1>
 
         <form method="post" action="<?= $link->url('profile.save') ?>" class="post-form">
-            
+
             <!-- Skryté ID pre rozlíšenie editácie -->
             <input type="hidden" name="id" value="<?= $post->getId() ?>">
 
