@@ -62,7 +62,7 @@
                                 <?php
                                 $time = date('H:i', strtotime($post->getDatePlanned()));
                                 if ($time !== '00:00') :
-                                ?>
+                                    ?>
                                     <span>🕒 <?= htmlspecialchars($time) ?></span>
                                 <?php endif; ?>
                             </div>

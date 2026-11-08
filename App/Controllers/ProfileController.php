@@ -17,7 +17,7 @@ class ProfileController extends BaseController
 
     /**
      * Summary of myposts
-     * 
+     *
      * This action serves the main HTML view of the user's own posts page, where users can see their own posts and related information.
      *
      * @return Response
