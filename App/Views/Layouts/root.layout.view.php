@@ -17,7 +17,9 @@
 <body>
     <header class="app-header">
         <div class="logo-container">
-            <img src="images\logo.png" alt="Logo" class="logo">
+            <a href="?c=home" title="StudentBuddy Home">
+                <img src="images\logo.png" alt="Logo" class="logo">
+            </a>
             <h1>StudentBuddy</h1>
         </div>
         <nav class="app-nav">
@@ -36,7 +38,7 @@
 
                     <div class="dropdown-content">
                         <a href="#profile">Môj profil</a>
-                        <a href="<?= $link->url('profile.myposts') ?>">Moje príspevky</a>
+                        <a href="<?= $link->url('post.myposts') ?>">Moje príspevky</a>
                         <a href="#logout">Odhlásiť sa</a>
                     </div>
                 </details>

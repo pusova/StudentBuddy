@@ -8,7 +8,7 @@
     <main class="app-main">
         <h1 class="form-main-title"><?= $post->getId() ? 'Upraviť príspevok' : 'Nový príspevok' ?></h1>
 
-        <form method="post" action="<?= $link->url('profile.save') ?>" class="post-form">
+        <form method="post" action="<?= $link->url('post.save') ?>" class="post-form">
 
             <!-- Skryté ID pre rozlíšenie editácie -->
             <input type="hidden" name="id" value="<?= $post->getId() ?>">

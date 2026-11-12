@@ -13,5 +13,6 @@ CREATE TABLE `posts` (
     `date_planned` datetime NOT NULL,
     `status` ENUM('active', 'inactive') NOT NULL DEFAULT 'active',
     `capacity` int(11) DEFAULT NULL,
+    `price` double DEFAULT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

@@ -43,6 +43,12 @@ class Post extends Model
     protected ?int $capacity = null;
     protected ?float $price = null;
 
+
+    public function comments()
+    {
+        return Comment::getAll('post_id = ?', [$this->id]);
+    }
+
     // --- ID ---
     public function getId(): ?int
     {
