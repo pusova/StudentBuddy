@@ -1,6 +1,9 @@
 <?php
+
 namespace App\Models;
+
 use Framework\Core\Model;
+
 class Comment extends Model
 {
     protected static ?array $fillable = [
@@ -17,7 +20,7 @@ class Comment extends Model
 
     public function post()
     {
-       return Post::getOne($this->post_id);
+        return Post::getOne($this->post_id);
     }
     // --- ID ---
     public function getId(): ?int

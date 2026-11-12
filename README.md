@@ -47,6 +47,10 @@ Prostredníctvom tejto aplikácie si študenti môžu organizovať spoločné ak
 - tabulka nahlásení pre administrátora
 - atribúty: #id, (fk)user_id, (fk)reported_post_id, (fk)reported_user_id, reason, status
 
+**Comment**
+ - tabulka komentárov patriaca konkrétnemu príspevku.
+ - atributy: #id, (fk)post_id, (fk)user_id, content
+
 ## Vzťahy medzi entitami
 **user 1:n post**
 - používateľ vytvorí viac príspevkov
@@ -65,6 +69,9 @@ Prostredníctvom tejto aplikácie si študenti môžu organizovať spoločné ak
 
 **user/post 1:n report**
 - na konkrétny príspevok alebo konkrétneho používateľa môže byť vytvorených viac nahlásení
+
+**post 1:n comment**
+ - konkrétny príspevok má n komentárov.
 
 ## Hlavné stránky aplikácie
 **feed príspevkov**

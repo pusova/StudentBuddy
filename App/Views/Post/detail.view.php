@@ -17,7 +17,7 @@
                     2 => '🎉 EVENTY',
                     3 => '📦 POŽIČOVŇA',
                 };
-            ?>
+                ?>
             <span class="category-badge"><?= $categoryName ?></span>
             <div class="post-detail-actions">
                 <details class="post-menu-details">

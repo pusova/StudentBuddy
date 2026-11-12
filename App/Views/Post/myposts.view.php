@@ -25,7 +25,7 @@
                                     2 => '🎉 EVENTY',
                                     3 => '📦 POŽIČOVŇA',
                                 };
-                            ?>
+    ?>
                             <span class="badge category"><?= $categoryName ?></span>
                             <div class="post-actions">
                                 <button class="btn-icon favourite">🤍</button>
